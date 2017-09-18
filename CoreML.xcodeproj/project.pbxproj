@@ -15,6 +15,7 @@
 		831365B71F5804A5002CB74A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 831365B61F5804A5002CB74A /* main.m */; };
 		831365C11F5804A5002CB74A /* CoreMLTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 831365C01F5804A5002CB74A /* CoreMLTests.m */; };
 		831365CC1F5804A6002CB74A /* CoreMLUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 831365CB1F5804A6002CB74A /* CoreMLUITests.m */; };
+		836048E41F6B8B98004923D0 /* MobileNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 836048E31F6B8B8E004923D0 /* MobileNet.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,9 @@
 		831365C71F5804A6002CB74A /* CoreMLUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreMLUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		831365CB1F5804A6002CB74A /* CoreMLUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreMLUITests.m; sourceTree = "<group>"; };
 		831365CD1F5804A6002CB74A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		836048E31F6B8B8E004923D0 /* MobileNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNet.mlmodel; sourceTree = "<group>"; };
+		836048E61F6F7FD1004923D0 /* IMG_0399.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_0399.PNG; sourceTree = "<group>"; };
+		836048E71F6F7FD1004923D0 /* IMG_0400.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_0400.PNG; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,7 @@
 		831365A61F5804A5002CB74A /* CoreML */ = {
 			isa = PBXGroup;
 			children = (
+				836048E31F6B8B8E004923D0 /* MobileNet.mlmodel */,
 				831365A71F5804A5002CB74A /* AppDelegate.h */,
 				831365A81F5804A5002CB74A /* AppDelegate.m */,
 				831365AA1F5804A5002CB74A /* ViewController.h */,
@@ -117,6 +122,7 @@
 		831365BF1F5804A5002CB74A /* CoreMLTests */ = {
 			isa = PBXGroup;
 			children = (
+				836048E51F6F7FD1004923D0 /* PreviewImage */,
 				831365C01F5804A5002CB74A /* CoreMLTests.m */,
 				831365C21F5804A5002CB74A /* Info.plist */,
 			);
@@ -131,6 +137,16 @@
 			);
 			path = CoreMLUITests;
 			sourceTree = "<group>";
+		};
+		836048E51F6F7FD1004923D0 /* PreviewImage */ = {
+			isa = PBXGroup;
+			children = (
+				836048E61F6F7FD1004923D0 /* IMG_0399.PNG */,
+				836048E71F6F7FD1004923D0 /* IMG_0400.PNG */,
+			);
+			name = PreviewImage;
+			path = CoreML/PreviewImage;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -199,7 +215,7 @@
 				TargetAttributes = {
 					831365A31F5804A5002CB74A = {
 						CreatedOnToolsVersion = 9.0;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					831365BB1F5804A5002CB74A = {
 						CreatedOnToolsVersion = 9.0;
@@ -265,6 +281,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				836048E41F6B8B98004923D0 /* MobileNet.mlmodel in Sources */,
 				831365AC1F5804A5002CB74A /* ViewController.m in Sources */,
 				831365B71F5804A5002CB74A /* main.m in Sources */,
 				831365A91F5804A5002CB74A /* AppDelegate.m in Sources */,
@@ -430,11 +447,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = X585696T4B;
 				INFOPLIST_FILE = CoreML/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ShiWenChen.com.CoreML;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "34779f32-976c-48a9-8576-55b1d8bc4e7b";
+				PROVISIONING_PROFILE_SPECIFIER = TestApp;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -443,11 +463,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = X585696T4B;
 				INFOPLIST_FILE = CoreML/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ShiWenChen.com.CoreML;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "34779f32-976c-48a9-8576-55b1d8bc4e7b";
+				PROVISIONING_PROFILE_SPECIFIER = TestApp;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
